@@ -1,0 +1,44 @@
+2025-12-29T19:22:04.184111346Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2025-12-29T19:22:04.248724437Z ==> Deploying...
+2025-12-29T19:22:47.593602613Z ==> Using Erlang version 28.0.2 (default)
+2025-12-29T19:22:51.399059462Z ==> Using Elixir version 1.18.4 (default)
+2025-12-29T19:22:55.600821152Z ==> Docs on specifying Elixir and Erlang versions: https://render.com/docs/elixir-erlang-versions
+2025-12-29T19:22:55.693249955Z ==> Running '_build/prod/rel/discord_bot/bin/discord_bot start'
+2025-12-29T19:23:09.394376129Z 
+2025-12-29T19:23:09.39441202Z 19:23:09.393 [warning] youtube-dl was not found in your path. Nostrum supports youtube-dl for voice.
+2025-12-29T19:23:09.39441861Z If you don't require youtube-dl support, configure :nostrum, :youtubedl to nil or false to suppress.
+2025-12-29T19:23:09.39442243Z 
+2025-12-29T19:23:09.39443998Z 
+2025-12-29T19:23:09.394452191Z 19:23:09.393 [warning] streamlink was not found in your path. Nostrum supports streamlink for voice.
+2025-12-29T19:23:09.394455861Z If you don't require streamlink support, configure :nostrum, :streamlink to nil or false to suppress.
+2025-12-29T19:23:09.394458661Z 
+2025-12-29T19:23:09.810637113Z 
+2025-12-29T19:23:09.810666623Z 19:23:09.810 [warning] No ratelimits received on bucket /gateway/bot, likely due to a server error. Holding off request queue pipelining until next client request.
+2025-12-29T19:23:09.810672774Z 
+2025-12-29T19:23:09.810695314Z 19:23:09.810 [warning] Retrying request for reason hit_429 with no known ratelimit information to "/gateway/bot" queued by {#PID<0.1269.0>, #Reference<0.3490943948.2731540481.195760>} in 10000ms
+2025-12-29T19:23:09.906395523Z ==> No open HTTP ports detected on 0.0.0.0, continuing to scan...
+2025-12-29T19:23:19.822117542Z 
+2025-12-29T19:23:19.822160673Z 19:23:19.821 [warning] No ratelimits received on bucket /gateway/bot, likely due to a server error. Holding off request queue pipelining until next client request.
+2025-12-29T19:23:19.822165093Z 
+2025-12-29T19:23:19.822169833Z 19:23:19.821 [warning] Retrying request for reason hit_429 with no known ratelimit information to "/gateway/bot" queued by {#PID<0.1269.0>, #Reference<0.3490943948.2731540481.195760>} in 10000ms
+2025-12-29T19:23:29.838822499Z 
+2025-12-29T19:23:29.83885668Z 19:23:29.838 [warning] No ratelimits received on bucket /gateway/bot, likely due to a server error. Holding off request queue pipelining until next client request.
+2025-12-29T19:23:29.83886129Z 
+2025-12-29T19:23:29.83886629Z 19:23:29.838 [warning] Retrying request for reason hit_429 with no known ratelimit information to "/gateway/bot" queued by {#PID<0.1269.0>, #Reference<0.3490943948.2731540481.195760>} in 10000ms
+2025-12-29T19:23:39.853620858Z 
+2025-12-29T19:23:39.853658029Z 19:23:39.853 [warning] No ratelimits received on bucket /gateway/bot, likely due to a server error. Holding off request queue pipelining until next client request.
+2025-12-29T19:23:39.853662639Z 
+2025-12-29T19:23:39.853668279Z 19:23:39.853 [warning] Retrying request for reason hit_429 with no known ratelimit information to "/gateway/bot" queued by {#PID<0.1269.0>, #Reference<0.3490943948.2731540481.195760>} in 10000ms
+2025-12-29T19:23:49.865843599Z 
+2025-12-29T19:23:49.86588461Z 19:23:49.865 [warning] No ratelimits received on bucket /gateway/bot, likely due to a server error. Holding off request queue pipelining until next client request.
+2025-12-29T19:23:49.86589628Z 
+2025-12-29T19:23:49.865899701Z 19:23:49.865 [warning] Retrying request for reason hit_429 with no known ratelimit information to "/gateway/bot" queued by {#PID<0.1269.0>, #Reference<0.3490943948.2731540481.195760>} in 10000ms
+2025-12-29T19:23:59.878354839Z 
+2025-12-29T19:23:59.87839758Z 19:23:59.877 [warning] No ratelimits received on bucket /gateway/bot, likely due to a server error. Holding off request queue pipelining until next client request.
+2025-12-29T19:23:59.87840345Z 
+2025-12-29T19:23:59.8784098Z 19:23:59.878 [warning] Retrying request for reason hit_429 with no known ratelimit information to "/gateway/bot" queued by {#PID<0.1269.0>, #Reference<0.3490943948.2731540481.195760>} in 10000ms
+2025-12-29T19:24:09.891747012Z 
+2025-12-29T19:24:09.891788683Z 19:24:09.891 [warning] No ratelimits received on bucket /gateway/bot, likely due to a server error. Holding off request queue pipelining until next client request.
+2025-12-29T19:24:09.891800364Z 
+2025-12-29T19:24:09.891805954Z 19:24:09.891 [warning] Retrying request for reason hit_429 with no known ratelimit information to "/gateway/bot" queued by {#PID<0.1269.0>, #Reference<0.3490943948.2731540481.195760>} in 10000ms
+2025-12-29T19:24:11.789209539Z ==> No open HTTP ports detected on 0.0.0.0, continuing to scan...
