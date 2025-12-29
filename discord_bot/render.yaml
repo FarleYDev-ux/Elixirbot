@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: discord-bot
+    env: elixir
+    region: oregon
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: _build/prod/rel/discord_bot/bin/discord_bot start
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: PORT
+        value: "4000"
