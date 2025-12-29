@@ -83,7 +83,7 @@ defmodule DiscordBot.Embeds do
     |> Embed.put_field("<:coins:1455236526316191806> **/dailyreward**", "Coleta R$30 a cada 12h (com bônus de 5% por streak)", false)
     |> Embed.put_field("<:Coin:1455236125034680351> **/balance**", "Mostra seu saldo total", false)
     |> Embed.put_field("<:sequer:1455238218378121374> **/stats**", "Estatísticas completas de ganhos", false)
-    |> Embed.put_field("<:Elixir:1455266619239698696> **Elixir Power**", "Bot construído com concorrência e performance máxima em Elixir! ⚡", false)
+    |> Embed.put_field("<:Elixir:1455266619239698696> **Elixir Power**", "Bot construído com concorrência e performance máxima em Elixir!", false)
   end
 
   defp format_relative_time(naive_datetime) do
