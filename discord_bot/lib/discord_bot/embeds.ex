@@ -79,10 +79,10 @@ defmodule DiscordBot.Embeds do
   def help_embed do
     base()
     |> Embed.put_title("<:book2:1455262776237756436> **Ajuda - Comandos Disponíveis**")
-    |> Embed.put_field("<:Pong:1455224028146176143> **/ping**", "Mostra latência do bot", false)
-    |> Embed.put_field("<:coins:1455236526316191806> **/dailyreward**", "Coleta R$30 a cada 12h (com bônus de 5% por streak)", false)
-    |> Embed.put_field("<:Coin:1455236125034680351> **/balance**", "Mostra seu saldo total", false)
-    |> Embed.put_field("<:sequer:1455238218378121374> **/stats**", "Estatísticas completas de ganhos", false)
+    |> Embed.put_field("<:Pong:1455224028146176143> **/ping**", "Mostra latência do bot", true)
+    |> Embed.put_field("<:coins:1455236526316191806> **/dailyreward**", "Coleta R$30 a cada 12h (com bônus de 5% por streak)", true)
+    |> Embed.put_field("<:Coin:1455236125034680351> **/balance**", "Mostra seu saldo total", true)
+    |> Embed.put_field("<:sequer:1455238218378121374> **/stats**", "Estatísticas completas de ganhos", true)
     |> Embed.put_field("<:Elixir:1455266619239698696> **Elixir Power**", "Bot construído com concorrência e performance máxima em Elixir!", true)
   end
 
