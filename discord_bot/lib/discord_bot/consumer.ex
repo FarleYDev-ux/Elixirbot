@@ -83,33 +83,6 @@ defmodule DiscordBot.Consumer do
     end
   end
 
-  def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
-    # Logging the entire message structure to see what's inside
-    IO.inspect(msg, label: "Full Message Received")
-    
-    # Check if the message is from a bot to avoid infinite loops
-    unless msg.author.bot do
-      case String.downcase(msg.content) do
-        "!ping" ->
-        shard_id = 0
-        bot_latency = 23
-        api_latency = 209
-        embed = Embeds.shard_info(shard_id, bot_latency, api_latency)
-        Nostrum.Api.Message.create(msg.channel_id, embeds: [embed])
-
-        "!dailyreward" ->
-          embed = Embeds.daily_reward(1250, 7, 25)
-          Nostrum.Api.Message.create(msg.channel_id, embeds: [embed])
-
-      "!" <> _rest ->
-          IO.puts("Unknown command starting with !: #{msg.content}")
-          
-        _ ->
-          :ignore
-      end
-    end
-  end
-
   def handle_event(_event) do
     :noop
   end
