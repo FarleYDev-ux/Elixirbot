@@ -25,7 +25,7 @@ defmodule DiscordBot.Embeds do
     |> Embed.put_title("<:Pong:1455224028146176143> **Pong! Aqui esta atualmente minha latencia e a latencia da api**")
     |> Embed.put_field("<:Antenna:1455220982364246036> **Bot**", "#{bot_latency}ms", true)
     |> Embed.put_field("<:bssola:1455218184046252240> **API**", "#{api_latency}ms", true)
-    |> Embed.put_field("<:Config:1455222961702441185> **Uptime**", uptime, true)
+    |> Embed.put_field("<:cloud:1455271582074273793> **Uptime**", uptime, true)
     |> Embed.put_footer("Powered by Elixir 1.18 Dev @gomezfy_", "https://elixir-lang.org/images/logo/logo-symbol.png")
   end
 
