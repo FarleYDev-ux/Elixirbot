@@ -7,11 +7,11 @@ config :nostrum,
   gateway_intents: [:guild_messages, :message_content, :guilds, :direct_messages]
 
 config :discord_bot, DiscordBot.Repo,
-  database: System.get_env("PGDATABASE") || "discord_bot",
-  username: System.get_env("PGUSER") || "postgres",
-  password: System.get_env("PGPASSWORD") || "postgres",
-  hostname: System.get_env("PGHOST") || "localhost",
-  port: (System.get_env("PGPORT") || "5432") |> String.to_integer(),
+  database: "heliumdb",
+  username: "postgres",
+  password: "password",
+  hostname: "helium",
+  port: 5432,
   stacktrace: true,
   show_sensitive_data_on_error: true,
   pool_size: 10
