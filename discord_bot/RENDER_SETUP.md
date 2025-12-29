@@ -40,6 +40,7 @@ Preencha os campos:
 |-------|-------|
 | **Name** | `discord-bot` |
 | **Runtime** | `Elixir` (deve detectar automaticamente) |
+| **Root Directory** | `discord_bot` ← ⚠️ IMPORTANTE: Como o bot está em subdiretório |
 | **Build Command** | `./build.sh` |
 | **Start Command** | `_build/prod/rel/discord_bot/bin/discord_bot start` |
 | **Environment** | `Production` |
