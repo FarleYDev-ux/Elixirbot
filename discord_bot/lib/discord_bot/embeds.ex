@@ -78,8 +78,8 @@ defmodule DiscordBot.Embeds do
 
   def help_embed do
     base()
-    |> Embed.put_title("📚 **Ajuda - Comandos Disponíveis**")
-    |> Embed.put_description("Bem-vindo ao bot de recompensas em Elixir!")
+    |> Embed.put_title("<:book2:1455262776237756436> **Ajuda - Comandos Disponíveis**")
+    |> Embed.put_description("<:abc:1455264222639558666> Bem-vindo ao bot de recompensas em Elixir!")
     |> Embed.put_field("<:Pong:1455224028146176143> **/ping**", "Mostra latência do bot", false)
     |> Embed.put_field("<:coins:1455236526316191806> **/dailyreward**", "Coleta R$30 a cada 12h (com bônus de 5% por streak)", false)
     |> Embed.put_field("<:Coin:1455236125034680351> **/balance**", "Mostra seu saldo total", false)
