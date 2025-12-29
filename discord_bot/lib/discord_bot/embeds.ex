@@ -10,7 +10,6 @@ defmodule DiscordBot.Embeds do
   def base do
     %Embed{}
     |> Embed.put_color(@elixir_purple)
-    |> Embed.put_footer("Powered by Elixir 1.18 & Nostrum", "https://elixir-lang.org/images/logo/logo-symbol.png")
     |> Embed.put_timestamp(DateTime.utc_now() |> DateTime.to_iso8601())
   end
 
