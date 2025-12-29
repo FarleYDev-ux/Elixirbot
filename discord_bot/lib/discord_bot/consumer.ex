@@ -1,7 +1,6 @@
 defmodule DiscordBot.Consumer do
   use Nostrum.Consumer
 
-  alias Nostrum.Api
   alias DiscordBot.Embeds
   alias DiscordBot.Rewards
 
