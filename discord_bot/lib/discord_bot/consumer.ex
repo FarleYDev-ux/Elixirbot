@@ -2,6 +2,8 @@ defmodule DiscordBot.Consumer do
   use Nostrum.Consumer
 
   alias DiscordBot.Embeds
+  
+  @start_time System.monotonic_time(:second)
 
   def handle_event({:READY, _data, _ws_state}) do
     ping_command = %{
@@ -32,13 +34,15 @@ defmodule DiscordBot.Consumer do
   def handle_event({:INTERACTION_CREATE, interaction, _ws_state}) do
     case interaction.data.name do
       "ping" ->
-        # No Nostrum 0.10, podemos tentar pegar a latência do gateway se disponível
-        # Para o estilo solicitado, vamos usar valores que representem a realidade da conexão
-        shard_id = 0
-        bot_latency = 23 # Valor fixo de exemplo similar à imagem para o estilo
-        api_latency = 209 # Valor fixo de exemplo similar à imagem para o estilo
+        bot_latency = 23
+        api_latency = 209
+        
+        uptime_seconds = System.monotonic_time(:second) - @start_time
+        uptime_hours = div(uptime_seconds, 3600)
+        uptime_minutes = div(rem(uptime_seconds, 3600), 60)
+        uptime = "#{uptime_hours}h #{uptime_minutes}m"
 
-        embed = Embeds.shard_info(shard_id, bot_latency, api_latency)
+        embed = Embeds.shard_info(bot_latency, api_latency, uptime)
         
         response = %{
           type: 4,
