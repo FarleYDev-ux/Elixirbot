@@ -23,9 +23,7 @@ defmodule DiscordBot.MixProject do
   defp deps do
     [
       {:nostrum, "~> 0.10"},
-      {:jason, "~> 1.4"},
-      {:ecto_sql, "~> 3.10"},
-      {:postgrex, "~> 0.18"}
+      {:jason, "~> 1.4"}
     ]
   end
 end

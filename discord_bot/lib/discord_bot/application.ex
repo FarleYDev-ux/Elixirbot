@@ -8,12 +8,9 @@ defmodule DiscordBot.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      DiscordBot.Cache,
       DiscordBot.Consumer
     ]
 
-    # See https://hexdocs.pm/elixir/Supervisor.html
-    # for other strategies and supported options
     opts = [strategy: :one_for_one, name: DiscordBot.Supervisor]
     Supervisor.start_link(children, opts)
   end

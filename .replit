@@ -23,7 +23,4 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "bash -c \"cd discord_bot && mix local.hex --force 2>/dev/null; mix ecto.create 2>/dev/null; mix run --no-halt\""
-
-[workflows.workflow.metadata]
-outputType = "console"
+args = "bash -c \"cd discord_bot && mix deps.get && mix run --no-halt\""
