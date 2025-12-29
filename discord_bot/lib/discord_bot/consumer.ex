@@ -17,12 +17,6 @@ defmodule DiscordBot.Consumer do
     }
     Nostrum.Api.ApplicationCommand.create_global_command(daily_reward_command)
 
-    stats_command = %{
-      name: "stats",
-      description: "Mostra suas estatísticas de ganhos"
-    }
-    Nostrum.Api.ApplicationCommand.create_global_command(stats_command)
-
     balance_command = %{
       name: "balance",
       description: "Mostra seu saldo atual"
@@ -79,18 +73,6 @@ defmodule DiscordBot.Consumer do
             }
             Nostrum.Api.Interaction.create_response(interaction, response)
         end
-
-      "stats" ->
-        user_id = interaction.user.id |> to_string()
-        user = Rewards.get_or_create_user(user_id)
-        embed = Embeds.user_stats(user)
-        response = %{
-          type: 4,
-          data: %{
-            embeds: [embed]
-          }
-        }
-        Nostrum.Api.Interaction.create_response(interaction, response)
 
       "balance" ->
         user_id = interaction.user.id |> to_string()
