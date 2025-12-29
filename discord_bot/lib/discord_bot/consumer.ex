@@ -2,7 +2,6 @@ defmodule DiscordBot.Consumer do
   use Nostrum.Consumer
 
   alias DiscordBot.Embeds
-  alias DiscordBot.Rewards
 
   def handle_event({:READY, _data, _ws_state}) do
     ping_command = %{
@@ -50,34 +49,17 @@ defmodule DiscordBot.Consumer do
         Nostrum.Api.Interaction.create_response(interaction, response)
 
       "dailyreward" ->
-        user_id = interaction.user.id |> to_string()
-        
-        case Rewards.claim_reward(user_id) do
-          {:ok, _user, amount, bonus} ->
-            embed = Embeds.daily_reward(amount, Rewards.get_or_create_user(user_id).streak, bonus)
-            response = %{
-              type: 4,
-              data: %{
-                embeds: [embed]
-              }
-            }
-            Nostrum.Api.Interaction.create_response(interaction, response)
-
-          {:wait, hours_left, _user, next_claim_time} ->
-            embed = Embeds.daily_reward_wait(hours_left, next_claim_time)
-            response = %{
-              type: 4,
-              data: %{
-                embeds: [embed]
-              }
-            }
-            Nostrum.Api.Interaction.create_response(interaction, response)
-        end
+        embed = Embeds.daily_reward(30, 1, 0)
+        response = %{
+          type: 4,
+          data: %{
+            embeds: [embed]
+          }
+        }
+        Nostrum.Api.Interaction.create_response(interaction, response)
 
       "balance" ->
-        user_id = interaction.user.id |> to_string()
-        user = Rewards.get_or_create_user(user_id)
-        embed = Embeds.user_balance(user.total_earned)
+        embed = Embeds.user_balance(0)
         response = %{
           type: 4,
           data: %{

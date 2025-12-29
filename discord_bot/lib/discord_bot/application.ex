@@ -9,8 +9,6 @@ defmodule DiscordBot.Application do
   def start(_type, _args) do
     children = [
       DiscordBot.Cache,
-      DiscordBot.Repo,
-      DiscordBot.Scheduler,
       DiscordBot.Consumer
     ]
 
